@@ -13,4 +13,9 @@ Seront indiqués dans cette liste:
 On pourrait envisager de réaliser une interface physique afin de permettre aux usagers de parcourir la liste des réunions et faire afficher le chemin à emprunter.
 Dans ce cas l'afficheur jouerai une animation _"idle"_ qui reste facultative.
 
+Ci-dessous un exemple d'un tel affichage (sans animations):
+Début du chemin:
 ![Begin path](./SVGs/debut_path.svg)
+
+Fin du chemin:
+![End path](./SVGs/fin_path.svg)
