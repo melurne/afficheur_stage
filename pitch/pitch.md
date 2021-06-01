@@ -11,9 +11,10 @@ Seront indiqués dans cette liste:
 * La salle dans laquelle ele doit avoir lieu
 
 On pourrait envisager de réaliser une interface physique afin de permettre aux usagers de parcourir la liste des réunions et faire afficher le chemin à emprunter.
-Dans ce cas l'afficheur jouerai une animation _"idle"_ qui reste facultative.
+Dans ce cas l'afficheur jouerai une animation _"idle"_ lorsqu'aucune réunion n'a été selectionnée.
 
 Ci-dessous un exemple d'un tel affichage (sans animations):
+
 Début du chemin:
 
 ![Begin path](./SVGs/debut_path.svg)
@@ -25,7 +26,15 @@ Fin du chemin:
 Il est évident que les choix graphiques sont ici temporaires et ne reflètent pas l'aspect graphique final de la solution, ces maquettes ne servent qu'à illustrer le principe de la solution présentée.
 
 ## Architecture programme
-Il est proposé de travailler avec un affichage de type web via CSS/JS ou PHP et de réaliser les animations par l'intermédiaire de graphiques SVG dont les éléments pourront être utilisés et modifiés par du code CSS et ainsi permettre de génerer les animations automatiquement et ainsi eviter de réaliser à la main les animations pour se rendre dans chaque salle du bâtiment.
-Pour ce qui est de la génération à proprement parler de ces chemins, il serait possible de représenter le bâtiment par une série de points par lesquels pourraient passer les administrés, et alors chaque chemin possible de l'afficheur à une salle pourrait être représentée par une liste ordonnée de ces points qui correspondraient à des coordonnées dans le SVG du plan. On pourra alors créer un vecteur ligne entre chacun des points à parcourir et ainsi animer ce chemin automatiquement.
+Il est proposé de travailler avec un affichage de type web via CSS/JS ou PHP et de réaliser les animations par l'intermédiaire de graphiques SVG dont les éléments pourront être utilisés et modifiés par du code CSS. Cela permettrai de génerer les animations automatiquement, nous evitant de réaliser à la main les animations pour se rendre dans chaque salle du bâtiment.
+Pour ce qui est de la génération à proprement parler de ces chemins, il serait possible de représenter le bâtiment par une série de points par lesquels pourraient passer les administrés, et alors chaque chemin possible de l'afficheur à une salle pourrait être représenté par une liste ordonnée de ces points qui correspondraient à des coordonnées dans le SVG du plan. On pourra alors créer un vecteur ligne entre chacun des points à parcourir et ainsi animer ce chemin automatiquement.
 
 Des framework comme ReacJS semblent bien adaptés pour la réalisation de cette partie.
+
+Pour ce qui est de la gestion des réunions, toutes les informations étant déjà disponibles dans une base de donnée MySQL, il suffira au programme de Query cette base afin de récuperer les données nécessaires.
+
+## Architecture matérielle potentielle
+Pour permettre aux usagers de sélectionner la réunion sur laquelle ils veulent des informations, il sera nécessaire de mettre en place une interface physique, qu'elle soit sous la forme d'un écran tactille ou d'un boitier avec deux boutons pour monter et descendre dans la liste.
+
+Au vue de la taille de l'écran considéré, le choix de le rendre tactille semble à la fois cher et peu fiable. Il est donc proposé de réaliser une interface avec deux boutons qui pourront être reliés directement à la raspberry pi qui s'occuperait de ce module.
+Ce module de commande aurait alors simplement besoin d'une alimentation électrique et d'une connection au réseau de la mairie pour acceder à la base de donnée.
