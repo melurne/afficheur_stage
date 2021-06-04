@@ -4,8 +4,9 @@ const pathsAsTuple = {
   "Salle de conférence": [(10, 20), (30, 50), (42, 78), (90, 50)]
 };
 
-class Point {
+class Point extends React.Component {
 	constructor(x, y) {
+    super();
 		this.x = x;
 		this.y = y;
 	}
@@ -20,10 +21,10 @@ const generatePointarray = (listOfTuples) => {
 	return pointsList;
 }
 
-const Points = {
+const paths = {
   "Salle de conférence": generatePointarray(pathsAsTuple["Salle de conférence"])
 };
 
 
 
-export default Points;
+export default paths;
