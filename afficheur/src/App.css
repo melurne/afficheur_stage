@@ -1,0 +1,137 @@
+.viewbox {
+  width: 804px;
+  height: 1236px;
+  margin-left: 8px;
+  margin-top: 0 auto;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0.0;
+  display: none;
+}
+
+.step {
+  position: absolute;
+	width: 320px;
+	height: 120px;
+	margin-top: -84px;
+	margin-left: -160px;
+	text-align: center;
+	display: table;
+	font-size: 25px;
+  background-color: #CCCCCC;
+  border-radius: 16px;
+  border: 2px solid black;
+}
+
+.step p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#step1 {
+  top: 236px;
+	left: 600px;
+}
+
+#step2 {
+  top: 380px;
+  left: 600px;
+}
+
+#step3 {
+  top: 524px;
+  left: 600px;
+}
+
+#step4 {
+  top: 668px;
+  left: 600px;
+}
+
+.event {
+  position: absolute;
+  width: 690px;
+  height: 94px;
+}
+
+.horaire {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  width: 98px;
+	height: 98px;
+	margin-top: -45px;
+	margin-left: -45px;
+	text-align: center;
+	display: table;
+	font-size: 18px;
+  background-color: #4444FF;
+  border-radius: 8px;
+}
+
+.horaire p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.intitule {
+  position: absolute;
+  top: 45px;
+  left: 310px;
+  width: 422px;
+	height: 98px;
+	margin-top: -45px;
+	margin-left: -200px;
+	text-align: center;
+	display: table;
+	font-size: 18px;
+  background-color: #8888FF;
+  border-radius: 8px;
+}
+
+.intitule p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.salle {
+  position: absolute;
+  top: 45px;
+  left: 745px;
+  width: 148px;
+	height: 98px;
+	margin-top: -45px;
+	margin-left: -200px;
+	text-align: center;
+	display: table;
+	font-size: 18px;
+  background-color: #4444FF;
+  border-radius: 8px;
+}
+
+.salle p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#event1 {
+  top: 862px;
+  left: 83px;
+}
+
+#event2 {
+  top: 977px;
+  left: 83px;
+}
+
+#event3 {
+  top: 1092px;
+  left: 83px;
+}
