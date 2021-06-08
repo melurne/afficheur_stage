@@ -1,4 +1,4 @@
-fileName = "ui.js"
+fileName = "uiv2.js"
 
 with open(fileName, "r") as f:
     listeLignes = f.readlines()

@@ -1,12 +1,22 @@
 const paths = {
+  "ascenceur" :
+        [
+          {x: 157, y: 265},
+          {x: 130, y: 265},
+          {x: 130, y: 210},
+          {x: 60, y: 210},
+          {x: 60, y: 234}
+        ],
+
   "Salle de conférence":  {
     etage : -1,
     trace :
           [
-            {x: 10, y: 20},
-		        {x: 30, y: 50},
-		        {x: 42, y: 78},
-		        {x: 90, y: 50}
+            {x: 60, y: 234},
+		        {x: 130, y: 265},
+		        {x: 130, y: 210},
+		        {x: 60, y: 210},
+
           ],
     steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A gauche au fond", "La porte sur la gauche"]
   },
@@ -18,6 +28,18 @@ const paths = {
             {x: 20, y:45}
           ],
     steps: ["Prendre l'ascenceur à gauche", "Monter au 2e", "Tout de suite en face", ""]
+  },
+
+  "Direction générale des services" : {
+    etage : 1,
+    trace :
+          [
+            {x: 157, y: 265},
+            {x: 130, y: 265},
+            {x: 130, y: 210},
+            {x: 10, y: 210}
+          ],
+    steps : ["Prendre à gauche", "Tout de suite en face", "", ""]
   }
 };
 
