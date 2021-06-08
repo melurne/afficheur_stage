@@ -109,52 +109,86 @@ class FloorPlan extends React.Component {
 
 			return (
 			<div className="reacted">
-			<div className="affichageChemin">
-			<div className="plans">
-			<div className="etageAfficheur plan" id={paths[events[selectedEvent].salle].etage === 1 ? "noChange" : "top"}>
-				<div>
-					<Chemin class={this.state.reseting ? "" : "topPath"} points={pathFromAfficheur} dotPosition={pathFromAfficheur[0]}/>
+				<div className="affichageChemin">
+					<div className="plans">
+						<div 	className="etageAfficheur plan"
+									id={paths[events[selectedEvent].salle].etage === 1 ? "noChange" : "top"}>
+							<div>
+								<Chemin class={this.state.reseting ? "" : "topPath"}
+												points={pathFromAfficheur}
+												dotPosition={pathFromAfficheur[0]}/>
+							</div>
+						</div>
+
+						<div 	className={paths[events[selectedEvent].salle].etage !== 1 ? "bottom plan" : "hidden"}
+									id={"floor"+paths[events[selectedEvent].salle].etage.toString()}>
+							<div>
+								<Chemin class={this.state.reseting ? "" : "botPath"}
+												points={pathToSalle} />
+							</div>
+						</div>
+					</div>
+
+					<div className="steps">
+						<div className={steps[0] !== "" ? "step" : "hidden"} id="step1">
+							<p>{steps[0]}</p>
+						</div>
+						<div className={steps[1] !== "" ? "step" : "hidden"} id="step2">
+							<p>{steps[1]}</p>
+						</div>
+						<div className={steps[2] !== "" ? "step" : "hidden"} id="step3">
+							<p>{steps[2]}</p>
+						</div>
+						<div className={steps[3] !== "" ? "step" : "hidden"} id="step4">
+							<p>{steps[3]}</p>
+						</div>
+					</div>
 				</div>
-			</div>
 
-			<div className={paths[events[selectedEvent].salle].etage !== 1 ? "bottom plan" : "hidden"} id={"floor"+paths[events[selectedEvent].salle].etage.toString()}>
-				<div>
-					<Chemin class={this.state.reseting ? "" : "botPath"} points={pathToSalle} />
+
+				<div className="events">
+					<div className={events[0].intitule === "" ? "hidden" : "partres1"}> <center>
+						<div className={selectedEvent === 0 ? "divres isSelected" : "divres"}>
+							<span className="hres">
+								{events[0].horaire}
+							</span>
+							<span className={this.state.curTime > events[0].horaire ? "res en_cours" : "res"}>
+								{events[0].intitule}
+							</span>
+							<span className="sres">
+								{events[0].salle}
+							</span>
+						</div>
+					</center></div>
+
+					<div className={events[1].intitule === "" ? "hidden" : "partres2"}> <center>
+						<div className={selectedEvent === 1 ? "divres isSelected" : "divres"}>
+							<span className="hres">
+								{events[1].horaire}
+							</span>
+							<span className={this.state.curTime > events[1].horaire ? "res en_cours" : "res"}>
+								{events[1].intitule}
+							</span>
+							<span className="sres">
+								{events[1].salle}
+							</span>
+						</div>
+					</center></div>
+
+					<div className={events[2].intitule === "" ? "hidden" : "partres3"}><center>
+						<div className={selectedEvent === 2 ? "divres isSelected" : "divres"}>
+							<span className="hres">
+								{events[2].horaire}
+							</span>
+							<span className={this.state.curTime > events[2].horaire ? "res en_cours" : "res"}>
+								{events[2].intitule}
+							</span>
+							<span className="sres">
+								{events[2].salle}
+							</span>
+						</div>
+					</center></div>
 				</div>
-			</div>
-			</div>
-
-			<div className="steps">
-			<div className={steps[0] !== "" ? "step" : "hidden"} id="step1">
-				<p>{steps[0]}</p>
-			</div>
-			<div className={steps[1] !== "" ? "step" : "hidden"} id="step2">
-				<p>{steps[1]}</p>
-			</div>
-			<div className={steps[2] !== "" ? "step" : "hidden"} id="step3">
-				<p>{steps[2]}</p>
-			</div>
-			<div className={steps[3] !== "" ? "step" : "hidden"} id="step4">
-				<p>{steps[3]}</p>
-			</div>
-			</div>
-			</div>
-
-
-			<div className="events">
-			<div className={events[0].intitule === "" ? "hidden" : "partres1"}> <center>
-				<div className={selectedEvent === 0 ? "divres isSelected" : "divres"}> <span className="hres"> {events[0].horaire} </span> <span className={this.state.curTime > events[0].horaire ? "res en_cours" : "res"}> {events[0].intitule} </span> <span className="sres"> {events[0].salle} </span></div>
-			</center></div>
-
-			<div className={events[1].intitule === "" ? "hidden" : "partres2"}> <center>
-				<div className={selectedEvent === 1 ? "divres isSelected" : "divres"}> <span className="hres"> {events[1].horaire} </span> <span className={this.state.curTime > events[1].horaire ? "res en_cours" : "res"}> {events[1].intitule} </span> <span className="sres"> {events[1].salle} </span></div>
-			</center></div>
-
-			<div className={events[2].intitule === "" ? "hidden" : "partres3"}><center>
-				<div className={selectedEvent === 2 ? "divres isSelected" : "divres"}> <span className="hres"> {events[2].horaire} </span> <span className={this.state.curTime > events[2].horaire ? "res en_cours" : "res"}> {events[2].intitule} </span> <span className="sres"> {events[2].salle} </span></div>
-			</center></div>
-			</div>
-
 			</div>
 		);
 	}
@@ -164,9 +198,9 @@ class FloorPlan extends React.Component {
 		}
 		return (
 			<div className="reacted">
-			<div className="centeredWraper">
-				<span id="noEvent">Il n'y a plus aucune réunion prévue aujourd'hui</span>
-			</div>
+				<div className="centeredWraper">
+					<span id="noEvent">Il n'y a plus aucune réunion prévue aujourd'hui</span>
+				</div>
 			</div>
 		);
 	}
