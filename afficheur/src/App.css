@@ -100,6 +100,9 @@
 .plan > div {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
+  transform-origin: top left;
+  transform: scale(0.9);
+
 }
 
 .bottom {
@@ -128,21 +131,22 @@
 }
 
 .step {
-  position: absolute;
 	width: 100%;
 	height: 120px;
 	text-align: center;
 	display: table;
 	font-size: 25px;
-  background-color: #CCCCCC;
+  background-color: #DCDDEE;
   border-radius: 16px;
-  border: 2px solid black;
+  border: 2px solid #9999AA;
+  font-family: 'Lato', sans-serif;
 }
 
 .step p {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  color: #333355;
 }
 
 #step1 {
@@ -163,75 +167,6 @@
 #step4 {
   position: relative;
   top: 16%;
-}
-
-.event {
-  position: absolute;
-  width: 690px;
-  height: 94px;
-}
-
-.horaire {
-  position: absolute;
-  top: 45px;
-  left: 45px;
-  width: 98px;
-	height: 98px;
-	margin-top: -45px;
-	margin-left: -45px;
-	text-align: center;
-	display: table;
-	font-size: 18px;
-  background-color: #4444FF;
-  border-radius: 8px;
-}
-
-.horaire p {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.intitule {
-  position: absolute;
-  top: 45px;
-  left: 310px;
-  width: 422px;
-	height: 98px;
-	margin-top: -45px;
-	margin-left: -200px;
-	text-align: center;
-	display: table;
-	font-size: 18px;
-  background-color: #8888FF;
-  border-radius: 8px;
-}
-
-.intitule p {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.salle {
-  position: absolute;
-  top: 45px;
-  left: 745px;
-  width: 148px;
-	height: 98px;
-	margin-top: -45px;
-	margin-left: -200px;
-	text-align: center;
-	display: table;
-	font-size: 18px;
-  background-color: #4444FF;
-  border-radius: 8px;
-}
-
-.salle p {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
 }
 
 .events {
@@ -358,6 +293,61 @@
 }
 
 .isSelected {
-  border: 3px solid black;
+  border: 3px solid #444477;
   border-radius: 12px;
+}
+
+@keyframes draw_in1 {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  50%{
+    stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes draw_in2 {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  50% {
+    stroke-dashoffset: 100%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+.chemin .topPath {
+  animation-iteration-count: infinite;
+  stroke-dasharray: 100%;
+  animation-name: draw_in1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.chemin .botPath {
+  animation-iteration-count: infinite;
+  stroke-dasharray: 100%;
+  animation-name: draw_in2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.centeredWraper {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  margin-top: -5%;
+  top: 45%;
+  left: 50%;
+  margin-left: -40%;
+}
+
+#noEvent {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  color: #007ABA;
+  top: -50%;
 }

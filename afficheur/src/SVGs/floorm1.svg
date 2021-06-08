@@ -1,11 +1,21 @@
 <svg width="401" height="400" viewBox="0 0 401 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect id="Rectangle 1" x="0.5" y="0.5" width="399" height="399" fill="#C5FFA2" stroke="#156800"/>
-<path id="Vector 2" d="M222.5 397.5V377.5H272.5V298.5H398" stroke="black"/>
-<path id="Vector 3" d="M232.5 346H189.5V285.5H232.5V346Z" stroke="black"/>
-<rect id="Rectangle 2" x="58.25" y="312.25" width="44.5" height="44.5" fill="#8F8888" stroke="black" stroke-width="0.5"/>
-<path id="Vector 1" d="M102 312.5V298H152V376.5H200.5V398" stroke="black"/>
-<path id="Vector 4" d="M57 310V298.5H0" stroke="black"/>
-<path id="Arrow 1" d="M212.061 359.939C211.475 359.354 210.525 359.354 209.939 359.939L200.393 369.485C199.808 370.071 199.808 371.021 200.393 371.607C200.979 372.192 201.929 372.192 202.515 371.607L211 363.121L219.485 371.607C220.071 372.192 221.021 372.192 221.607 371.607C222.192 371.021 222.192 370.071 221.607 369.485L212.061 359.939ZM212.5 399V361H209.5V399H212.5Z" fill="#FF0000"/>
-<path id="Vector 5" d="M1 239H134V169" stroke="black"/>
-<path id="Vector 6" d="M401 244H269V172" stroke="black"/>
+<rect id="Rectangle 1" x="1.5" y="0.5" width="399" height="399" fill="#C5FFA2" stroke="#156800"/>
+<rect id="Rectangle 2" x="59.5" y="312.5" width="44" height="44" fill="#C4C4C4" stroke="black" stroke-width="0.5"/>
+<path id="Vector 1" d="M60.5 313.5V305H28V287L38.5 262" stroke="black"/>
+<path id="Vector 2" d="M27.5 263V217.5H94.5L130.5 229.5" stroke="black"/>
+<path id="Vector 3" d="M130.5 218H312.5V258.5L307.5 271.5" stroke="black"/>
+<path id="Vector 4" d="M308 285L315 297.5V316H308L285 304.5" stroke="black"/>
+<path id="Vector 5" d="M284.5 317H261V308.5H226.5V317L212 325.5" stroke="black"/>
+<path id="Vector 6" d="M212 316V308H103.5V316" stroke="black"/>
+<path id="Vector 7" d="M315.5 305H341V291.5L351 273.5" stroke="black"/>
+<path id="Vector 8" d="M341 273.5V218H334.5L317 211.5" stroke="black"/>
+<path id="Vector 9" d="M313 217.5H318.5" stroke="black"/>
+<path id="Vector 10" d="M27.5 252H2" stroke="black"/>
+<path id="Vector 11" d="M61.5 398.5V355" stroke="black"/>
+<path id="Vector 12" d="M27.5 294H1V301.5M1 301.5H27.5V310H1V301.5Z" stroke="black"/>
+<path id="Vector 13" d="M61 369H51.5M24.5 369H1.5M24.5 399.5L1.5 396" stroke="black"/>
+<path id="Vector 14" d="M284.5 317.5V399.5H294.5L315 389.5M315 399.5H337V338M315 329H337V338M315 338H337" stroke="black"/>
+<path id="Vector 15" d="M337 346H316.5M316.5 354H337M337 361H316.5M337 369H316.5V330" stroke="black"/>
+<path id="Vector 16" d="M307.5 316V335.5M316 316V369.5H307.5V352M285.5 335.5H307.5M307.5 335.5V344M285.5 344H307.5M307.5 344V352M285.5 352H307.5" stroke="black"/>
+<path id="Vector 17" d="M182.5 218V229.5H210.5V218M225.5 218V229.5H249.5V218" stroke="black"/>
 </svg>

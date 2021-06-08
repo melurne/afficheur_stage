@@ -2,12 +2,12 @@ const events = [
   {
     horaire: "14:00",
     intitule: "Réunion de direction",
-    salle: "Salle de conférence"
+    salle: "Salle des commissions"
   },
   {
-    horaire: "14h30",
+    horaire: "14:30",
     intitule: "FAQ avec le maire",
-    salle: "Salle du conseil municipal"
+    salle: "Salle des conférences"
   },
   {
     horaire: "16:15",

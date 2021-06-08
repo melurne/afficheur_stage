@@ -8,17 +8,26 @@ const paths = {
           {x: 60, y: 234}
         ],
 
-  "Salle de conférence":  {
+  "Salle des conférences":  {
     etage : -1,
     trace :
           [
             {x: 60, y: 234},
-		        {x: 130, y: 265},
-		        {x: 130, y: 210},
 		        {x: 60, y: 210},
-
+		        {x: 245, y: 210},
+            {x: 245, y:170}
           ],
-    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A gauche au fond", "La porte sur la gauche"]
+    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au fond", "La porte sur la gauche"]
+  },
+  "Salle des commissions":  {
+    etage : -1,
+    trace :
+          [
+            {x: 60, y: 234},
+		        {x: 60, y: 210},
+		        {x: 250, y: 210}
+          ],
+    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au fond", "La porte en face"]
   },
   "Salle du conseil municipal": {
     etage : 2,
