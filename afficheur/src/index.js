@@ -198,9 +198,9 @@ class FloorPlan extends React.Component {
 		}
 		return (
 			<div className="reacted">
-				<div className="centeredWraper">
-					<span id="noEvent">Il n'y a plus aucune réunion prévue aujourd'hui</span>
-				</div>
+					<div className="centeredWraper">
+						<span id="noEvent">Il n'y a plus aucune réunion prévue aujourd'hui</span>
+					</div>
 			</div>
 		);
 	}
