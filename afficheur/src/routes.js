@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
 const connection = mysql.createPool({
-  host: 'localhost',
+  host: 'localhost:3308',
   user: 'root',
-  password: '',
+  password: 'root',
   database: 'grr_v31'
 });
 
