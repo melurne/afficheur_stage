@@ -5,9 +5,20 @@ import Axios from 'axios';
 const qs = require('qs');
 
 class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.function = () => {
+      this.props.function(parseInt(this.props.id));
+      setTimeout(() => {
+        console.log("reset");
+        this.props.function(-1);
+      }, 15000);
+    }
+  }
+
   render() {
     return(
-      <input id={this.props.id} type="button" value={this.props.id} onClick={this.props.function} />
+      <input className="button" id={this.props.id} type="button" value={this.props.value} onClick={this.function} />
     );
   }
 }
@@ -19,9 +30,6 @@ class Selector extends React.Component {
         currentlyShowing: -1
       }
       this.changeDisplay = this.changeDisplay.bind(this);
-      this.changeTo1 = this.changeTo1.bind(this);
-      this.changeTo2 = this.changeTo2.bind(this);
-      this.changeTom1 = this.changeTom1.bind(this);
   }
 
   changeDisplay(room) {
@@ -33,29 +41,24 @@ class Selector extends React.Component {
       }
     }).then(res => console.log(res))
       .catch(err => console.log(err));
+
   }
 
   componentDidMount() {
     this.changeDisplay(1);
   }
 
-  changeTo1() {
-    this.changeDisplay(1);
-  }
-  changeTo2() {
-    this.changeDisplay(2);
-  }
-  changeTom1() {
-    this.changeDisplay(-1);
-  }
-
   render() {
     return (
-      <div>
-        <Button id="1" function={this.changeTo1} />
-        <Button id="2" function={this.changeTo2} />
-        <Button id="-1" function={this.changeTom1} />
-
+      <div id="buttonsList">
+        <div className="buttonRow">
+          <Button id="1" function={this.changeDisplay} value="Salle des commissions" />
+          <Button id="2" function={this.changeDisplay} value="Salle des conférences"/>
+          <Button id="-1" function={this.changeDisplay} value="Affichage idle"/>
+          <Button id="3" function={this.changeDisplay} value="DGS" />
+          <Button id="4" function={this.changeDisplay} value="DSI" />
+          <Button id="5" function={this.changeDisplay} value="Bureau des adjoints" />
+        </div>
       </div>
     );
   }

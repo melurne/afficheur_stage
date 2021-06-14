@@ -1,0 +1,58 @@
+.hidden {
+  visibility: hidden;
+  opacity: 0.0;
+  display: none;
+}
+
+#banner{
+    top: 0; left:0;
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    background-color: #007ABA;
+    display:inline-block;
+}
+
+#logo{
+    height: 70%;
+    padding: 20px;
+    padding-top: 15px;
+    left: 0px;
+    position: absolute;
+}
+
+#titre b{
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 50px;
+    position: inherit;
+    display:block;
+    text-align:center;
+    width: 100%;
+    line-height: 30%;
+    padding-top: 3%;
+    color:ghostwhite;
+    font-weight: 900;
+}
+
+#buttonsList {
+  position: relative;
+  padding-top: 30%;
+  width: 100%;
+  display: table;
+  padding: 10%;
+
+}
+
+.buttonRow {
+  display: table-row;
+}
+
+.button {
+  display: table-cell;
+  width: 25%;
+  height: 5%;
+  font-size: 300%;
+  margin: 1%;
+  background-color: lightsteelblue;
+  border-radius: 12px;
+}

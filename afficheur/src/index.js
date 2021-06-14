@@ -35,7 +35,7 @@ class Display extends React.Component {
 				console.log("tick");
 				this.getRequest();
 			}
-			, 6000
+			, 1000
 		);
 	}
 

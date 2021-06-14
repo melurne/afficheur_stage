@@ -51,18 +51,38 @@ const paths = {
             {x: 10, y: 210}
           ],
     steps : ["Prendre à gauche", "Tout de suite en face", "", ""]
+  },
+
+  "Direction des services informatiques" : {
+    etage : 4,
+    trace :
+          [
+            {x: 0, y:0},
+            {x: 0, y:0}
+          ],
+    steps : ["Prendre l'ascenceur à gauche", "Monter au 4e", "Dans le couloir à gauche", "3e porte à droite"]
+  },
+
+  "Bureau des adjoints" : {
+    etage : 1,
+    trace :
+          [
+            {x: 0, y:0},
+            {x: 0, y:0}
+          ],
+    steps : ["Prendre à droite", "Tout de suite en face", "", ""]
   }
 };
 
 const mapSalle = (n) => {
-  switch (n) {
-    case 1:
-      return("Salle des commissions");
-    case 2:
-      return("Salle des conférences");
-    default:
-      return("");
-  }
+  const salles = ["",
+                  "Salle des commissions",
+                  "Salle des conférences",
+                  "Direction générale des services",
+                  "Direction des services informatiques",
+                  "Bureau des adjoints"
+                ];
+  return salles[n];
 };
 
 class Chemin extends React.Component {

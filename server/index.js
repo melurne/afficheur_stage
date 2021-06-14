@@ -14,7 +14,6 @@ const db = mysql.createPool({
 
 const timestamp = Math.round((new Date()).getTime()/1000);
 const sqlQuery = "SELECT from_unixtime(grr__entry.start_time, '%H:%i') debut, from_unixtime(grr__entry.end_time, '%H:%i') fin, grr__entry.name intitule, grr__entry.room_id FROM grr__entry WHERE (grr__entry.moderate='0') AND (grr__entry.courrier='1') AND (grr__entry.end_time >" + timestamp.toString() + ") ORDER BY grr__entry.start_time";
-//const sqlQuery = "SELECT from_unixtime(" + timestamp.toString() + ", '%H:%i');"
 
 var room;
 
@@ -33,6 +32,7 @@ app.get('/events', (req, res) => {
 app.post('/api/request', (req,res) => {
   room = req.body.room_id;
   console.log(req.body);
+  res.status(200).send();
   app.get('/request', (req, res) => {
     res.send({room_id: room});
   });
