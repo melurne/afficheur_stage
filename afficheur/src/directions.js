@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from 'axios';
 import './App.css';
 import paths, { Chemin } from './paths.js';
 

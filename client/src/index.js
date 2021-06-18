@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import Axios from 'axios';
-const qs = require('qs');
 
 class Button extends React.Component {
   constructor(props) {
