@@ -57,8 +57,13 @@ const paths = {
     etage : 4,
     trace :
           [
-            {x: 0, y:0},
-            {x: 0, y:0}
+            {x: 44, y:250},
+            {x: 30, y:250},
+            {x: 30,y: 275},
+            {x: 90,y: 275},
+            {x: 90,y: 255},
+            {x: 145,y: 255},
+            {x: 145,y: 260}
           ],
     steps : ["Prendre l'ascenceur à gauche", "Monter au 4e", "Dans le couloir à gauche", "3e porte à droite"]
   },
@@ -67,8 +72,10 @@ const paths = {
     etage : 1,
     trace :
           [
-            {x: 0, y:0},
-            {x: 0, y:0}
+            {x: 157, y: 265},
+            {x: 190, y: 265},
+            {x: 190, y: 210},
+            {x: 290, y: 210}
           ],
     steps : ["Prendre à droite", "Tout de suite en face", "", ""]
   }

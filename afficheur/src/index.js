@@ -21,7 +21,9 @@ class Display extends React.Component {
 			.then(response => {
 				const room_id = response.data.room_id;
 				if (room_id === -1) {
-					this.setState({displayMode: 'idle', destination: ''});
+					if (this.state.displayMode !== 'idle') {
+						this.setState({displayMode: 'idle', destination: ''});
+					}
 				}
 				else {
 					this.setState({displayMode: 'destination', destination: mapSalle(room_id)});
