@@ -14,10 +14,10 @@ const credentials = {
 
 const db = mysql.createPool(credentials);
 
-const timestamp = Math.round((new Date()).getTime()/1000);
+const timestamp = Math.round((new Date()).getTime()/1000) + 7200;
 const sqlQuery = "SELECT from_unixtime(grr__entry.start_time, '%H:%i') debut, from_unixtime(grr__entry.end_time, '%H:%i') fin, grr__entry.name intitule, grr__entry.room_id FROM grr__entry WHERE (grr__entry.moderate='0') AND (grr__entry.courrier='1') AND (grr__entry.end_time >" + timestamp.toString() + ") ORDER BY grr__entry.start_time";
 
-var room;
+var room = -1;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));

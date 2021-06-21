@@ -34,7 +34,7 @@ class Display extends React.Component {
 	componentDidMount() {
 		this.intervalID = setInterval(
 			() => {
-				console.log("tick");
+				//console.log("tick");
 				this.getRequest();
 			}
 			, 1000

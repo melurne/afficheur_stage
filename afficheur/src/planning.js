@@ -7,19 +7,26 @@ import paths, { mapSalle, Chemin } from './paths.js';
 class FloorPlan extends React.Component {
 	constructor() {
 		super();
-		const today = new Date();
+		let h = new Date().getHours().toLocaleString(undefined, {minimumIntegerDigits: 2});
+		let m = new Date().getMinutes().toLocaleString(undefined, {minimumIntegerDigits: 2});
+		let curTime = h + ':' + m;
 		this.state = {
 			selectedEvent: 0,
 			reseting: false,
-			curTime: today.getHours() + ":" + today.getMinutes(),
-			events: [{debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}]
+			curTime: curTime,
+			events: [{debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}],
+			cycling: false
 		};
 		this.cursorUp = this.cursorUp.bind(this);
 		this.cursorDown = this.cursorDown.bind(this);
 		this.handler = this.handler.bind(this);
 		this.tick = this.tick.bind(this);
 		this.updateEvents = this.updateEvents.bind(this);
+		this.cycler = this.cycler.bind(this);
 		this.updateEvents();
+		this.cyclingInterval = setInterval(() => {
+			this.cycler();
+		}, 30000);
 		document.addEventListener('keydown', (e) => this.handler(e));
 	}
 
@@ -35,6 +42,20 @@ class FloorPlan extends React.Component {
 				this.cursorDown();
 			}
 			this.setState({reseting: true});
+		}
+	}
+
+	cycler() {
+		if (this.state.selectedEvent === -1) {
+			return;
+		}
+		else {
+			if (this.state.selectedEvent === 2 || (this.state.selectedEvent !== 2 && this.state.events[this.state.selectedEvent + 1].intitule === "")) {
+				this.setState({selectedEvent: 0});
+			}
+			else {
+				this.setState({selectedEvent: this.state.selectedEvent + 1});
+			}
 		}
 	}
 
@@ -78,10 +99,14 @@ class FloorPlan extends React.Component {
 
 	componentWillUnmount() {
 		clearInterval(this.intervalID);
+		clearInterval(this.cyclingInterval);
 	}
 
 	tick() {
-		this.setState({curTime: new Date().getHours() + ':' + new Date().getMinutes()});
+		let h = new Date().getHours().toLocaleString(undefined, {minimumIntegerDigits: 2});
+		let m = new Date().getMinutes().toLocaleString(undefined, {minimumIntegerDigits: 2});
+		let curTime = h + ':' + m;
+		this.setState({curTime: curTime});
 	}
 
 	componentDidUpdate() {
@@ -95,24 +120,25 @@ class FloorPlan extends React.Component {
 	updateEvents() {
 		Axios.get("http://localhost:3001/events")
 			.then(response => {
-				console.log(response);
+				//console.log(response);
 				var events_ = [];
 				for (var rep of response.data) {
 					events_ = [...events_, {debut: rep.debut, intitule: rep.intitule, salle: mapSalle(rep.room_id)}];
-					if (events_.length > 4) {
-						break;
-					}
 				}
 				while (events_.length < 3) {
 					events_ = [...events_, {debut: "", intitule: "", salle: ""}];
 				}
-				this.setState({events: events_, selectedEvent: 0}, console.log("data get success", events_))
+				this.setState({events: events_}/*, console.log("data get success", events_)*/)
 			})
 	}
 
 	render() {
-			console.log(this.state.events);
+			//console.log(this.state.events);
+			console.log(this.state.curTime);
 		if (this.state.selectedEvent !== -1 && this.state.events[0].intitule !== ""){
+			if (this.state.events[0].fin < this.state.curTime) {
+				this.updateEvents();
+			}
 			var events = this.state.events;
 			var selectedEvent = this.state.selectedEvent;
 			var steps = paths[events[selectedEvent].salle].steps;
@@ -207,7 +233,7 @@ class FloorPlan extends React.Component {
 	}
 	else {
 		if (this.state.selectedEvent !== -1) {
-			this.setState({selectedEvent: -1});
+			//this.setState({selectedEvent: -1});
 		}
 		return (
 			<div className="reacted">

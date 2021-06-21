@@ -19,7 +19,7 @@ const paths = {
 		        {x: 245, y: 210},
             {x: 245, y:167}
           ],
-    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au fond", "La porte sur la gauche"]
+    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au bout", "La porte sur la gauche"]
   },
   "Salle des commissions":  {
     etage : -1,
@@ -29,7 +29,7 @@ const paths = {
 		        {x: 60, y: 210},
 		        {x: 255, y: 210}
           ],
-    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au fond", "La porte en face"]
+    steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au bout", "La porte en face"]
   },
   "Salle du conseil municipal": {
     etage : 2,
