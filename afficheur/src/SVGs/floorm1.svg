@@ -1,21 +1,96 @@
-<svg width="401" height="400" viewBox="0 0 401 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect id="Rectangle 1" x="1.5" y="100.5" width="399" height="300" fill="#C5FFA2" stroke="#156800"/>
-<rect id="Rectangle 2" x="59.5" y="312.5" width="44" height="44" fill="#C4C4C4" stroke="black" stroke-width="0.5"/>
-<path id="Vector 1" d="M60.5 313.5V305H28V287L38.5 262" stroke="black"/>
-<path id="Vector 2" d="M27.5 263V217.5H94.5L130.5 229.5" stroke="black"/>
-<path id="Vector 3" d="M130.5 218H312.5V258.5L307.5 271.5" stroke="black"/>
-<path id="Vector 4" d="M308 285L315 297.5V316H308L285 304.5" stroke="black"/>
-<path id="Vector 5" d="M284.5 317H261V308.5H226.5V317L212 325.5" stroke="black"/>
-<path id="Vector 6" d="M212 316V308H103.5V316" stroke="black"/>
-<path id="Vector 7" d="M315.5 305H341V291.5L351 273.5" stroke="black"/>
-<path id="Vector 8" d="M341 273.5V218H334.5L317 211.5" stroke="black"/>
-<path id="Vector 9" d="M313 217.5H318.5" stroke="black"/>
-<path id="Vector 10" d="M27.5 252H2" stroke="black"/>
-<path id="Vector 11" d="M61.5 398.5V355" stroke="black"/>
-<path id="Vector 12" d="M27.5 294H1V301.5M1 301.5H27.5V310H1V301.5Z" stroke="black"/>
-<path id="Vector 13" d="M61 369H51.5M24.5 369H1.5M24.5 399.5L1.5 396" stroke="black"/>
-<path id="Vector 14" d="M284.5 317.5V399.5H294.5L315 389.5M315 399.5H337V338M315 329H337V338M315 338H337" stroke="black"/>
-<path id="Vector 15" d="M337 346H316.5M316.5 354H337M337 361H316.5M337 369H316.5V330" stroke="black"/>
-<path id="Vector 16" d="M307.5 316V335.5M316 316V369.5H307.5V352M285.5 335.5H307.5M307.5 335.5V344M285.5 344H307.5M307.5 344V352M285.5 352H307.5" stroke="black"/>
-<path id="Vector 17" d="M182.5 218V229.5H210.5V218M225.5 218V229.5H249.5V218" stroke="black"/>
+<svg width="400" height="401" viewBox="0 0 400 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="background">
+<rect id="Rectangle 1" y="100" width="399.005" height="300" fill="#00FF94"/>
+<line id="Line 3" x1="90.7737" y1="399.5" x2="140.649" y2="399.5" stroke="black"/>
+<line id="Line 4" x1="175.562" y1="399.5" x2="225.438" y2="399.5" stroke="black"/>
+<line id="Line 5" x1="310.226" y1="399.5" x2="360.102" y2="399.5" stroke="black"/>
+<line id="Line 2" x1="20.9478" y1="399.5" x2="70.8234" y2="399.5" stroke="black"/>
+</g>
+<g id="entree gauche">
+<path id="Vector 3" d="M77.5 270V262.5M123 222H77.5V262.5M77.5 262.5H10V269.5M10.5 301H10V315.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="escalier gauche" d="M40 376H44H47.5M40 376H10V366M40 376V366M47.5 376H77.5V366M47.5 376V366M47.5 366H77.5M47.5 366V355.5M77.5 366V355.5M77.5 355.5V345.5H47.5V355.5M77.5 355.5H47.5M40 345.5H10M40 345.5V355.5M40 345.5V335.5M10 345.5V355.5M10 345.5V335.5M10 366H40M10 366V355.5M40 366V355.5M40 355.5H10M10 335.5H40M10 335.5V325M40 335.5V325M40 325V315H10V325M40 325H10" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 2" d="M77.5 345V301" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="porte">
+<line id="Line 7" x1="78" y1="269.5" x2="46" y2="269.5" stroke="black"/>
+<path id="Vector 4" opacity="0.3" d="M77.5 301C53.5 301 46.8333 280 46.5 269.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<line id="Line 6" opacity="0.3" x1="77.5" y1="301" x2="77.5" y2="269" stroke="black"/>
+</g>
+<g id="porte_2">
+<line id="Line 7_2" y1="-0.5" x2="32" y2="-0.5" transform="matrix(1 0 0 -1 10.5 269)" stroke="black"/>
+<path id="Vector 4_2" opacity="0.3" d="M11 301C35 301 41.6667 280 42 269.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<line id="Line 6_2" opacity="0.3" y1="-0.5" x2="32" y2="-0.5" transform="matrix(0 -1 -1 0 10 301)" stroke="black"/>
+</g>
+<path id="Vector 5" d="M10 376.5V400M77.5 376.5V400" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="porte vitree">
+<g id="porte_3">
+<line id="Line 7_3" x1="332" y1="234.5" x2="300" y2="234.5" stroke="black"/>
+<path id="Vector 4_3" opacity="0.3" d="M331.5 266C307.5 266 300.833 245 300.5 234.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<line id="Line 6_3" opacity="0.3" x1="331.5" y1="266" x2="331.5" y2="234" stroke="black"/>
+</g>
+<g id="porte_4">
+<line id="Line 7_4" y1="-0.5" x2="32" y2="-0.5" transform="matrix(-1 0 0 1 332 298)" stroke="black"/>
+<path id="Vector 4_4" opacity="0.3" d="M331.5 266C307.5 266 300.833 287 300.5 297.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<line id="Line 6_4" opacity="0.3" y1="-0.5" x2="32" y2="-0.5" transform="matrix(0 1 1 0 332 266)" stroke="black"/>
+</g>
+<path id="Vector 10" d="M332 310V297.5M332 234.5L332 222" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
+<g id="entree droite">
+<path id="Vector 9" d="M331 309.5H332V346H328.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<path id="escalier gauche_2" d="M336 376.5H332H328.5M336 376.5H366V366.5M336 376.5V366.5M328.5 376.5H298.5V366.5M328.5 376.5V366.5M328.5 366.5H298.5M328.5 366.5V356M298.5 366.5V356M298.5 356V346H328.5V356M298.5 356H328.5M336 346H366M336 346V356M336 346V336M366 346V356M366 346V336M366 366.5H336M366 366.5V356M336 366.5V356M336 356H366M366 336H336M366 336V325.5M336 336V325.5M336 325.5V315.5H366V325.5M336 325.5H366" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 7" d="M297.5 376.5V309.5H299.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<g id="porte_5">
+<path id="Vector 8" opacity="0.3" d="M300 340.5C324.8 340.5 331 319.833 331 309.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 9" x1="300" y1="309" x2="300" y2="341" stroke="black"/>
+<line id="Line 10" opacity="0.3" x1="299.5" y1="309.5" x2="331.5" y2="309.5" stroke="black"/>
+</g>
+<path id="Vector 12" d="M298.5 376.5V399.5M366 376.5H368V399.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 11" x1="297.5" y1="376.5" x2="297.5" y2="399.5" stroke="black"/>
+</g>
+<g id="entree endicapes">
+<line id="Line 8" opacity="0.4" x1="90" y1="377" x2="140" y2="377" stroke="black"/>
+<path id="entree endicapes_2" d="M78.5 301.5V315M78.5 400V377M78.5 377H89.5M78.5 377V341.5M140.5 377H146M146 377V356.5H139V348.5H142M146 377V400M142 317.5H139V311.5M139 310H146.5V312.5M139 310H113M139 310V311.5M177.5 313V310H205M113 310V311.5H139M113 310V315M113 315H78.5M113 315V323.5M78.5 315V323.5M78.5 323.5H113M78.5 323.5V332.5M113 323.5V332.5M113 332.5H78.5M113 332.5V341.5H78.5M78.5 332.5V341.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
+<rect id="ascenseur" x="142.25" y="313.25" width="39.5" height="39.5" fill="#C4C4C4" stroke="#7C7C7C" stroke-width="0.5"/>
+<g id="hall">
+<path id="Vector 11" d="M236.5 310.5H257.5M288.5 310.5H297.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<g id="porte_6">
+<path id="Vector 8_2" opacity="0.3" d="M257.5 341.5C282.3 341.5 288.5 320.833 288.5 310.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 9_2" x1="257.5" y1="310" x2="257.5" y2="342" stroke="black"/>
+<line id="Line 10_2" opacity="0.3" x1="257" y1="310.5" x2="289" y2="310.5" stroke="black"/>
+</g>
+<g id="porte_7">
+<path id="Vector 8_3" opacity="0.3" d="M205.5 341.5C230.3 341.5 236.5 320.833 236.5 310.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 9_3" x1="205.5" y1="310" x2="205.5" y2="342" stroke="black"/>
+<line id="Line 10_3" opacity="0.3" x1="205" y1="310.5" x2="237" y2="310.5" stroke="black"/>
+</g>
+<path id="Vector 14" d="M154.5 222H262V216.5H266.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<g id="porte_8">
+<path id="Vector 8_4" opacity="0.3" d="M123.5 191C148.3 191 154.5 211.667 154.5 222" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 9_4" y1="-0.5" x2="32" y2="-0.5" transform="matrix(0 -1 -1 0 123 222.5)" stroke="black"/>
+<line id="Line 10_4" opacity="0.3" y1="-0.5" x2="32" y2="-0.5" transform="matrix(1 0 0 -1 123 221.5)" stroke="black"/>
+</g>
+<g id="porte_9">
+<path id="Vector 8_5" opacity="0.3" d="M266.5 247.5C291.3 247.5 297.5 226.833 297.5 216.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 9_5" x1="266.5" y1="216" x2="266.5" y2="248" stroke="black"/>
+<line id="Line 10_5" opacity="0.3" x1="266" y1="216.5" x2="298" y2="216.5" stroke="black"/>
+</g>
+<path id="Vector 13" d="M332 222H301.5V216.5H297.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<rect id="Rectangle 4" x="195.5" y="223.5" width="5" height="5" fill="#C4C4C4" fill-opacity="0.4" stroke="black"/>
+<rect id="Rectangle 3" x="202.5" y="222.5" width="26" height="9" fill="#C4C4C4" fill-opacity="0.4" stroke="black"/>
+<rect id="Rectangle 2" x="230.5" y="222.5" width="26" height="9" fill="#C4C4C4" fill-opacity="0.4" stroke="black"/>
+</g>
+<g id="Salles">
+<g id="porte_10">
+<path id="Vector 8_6" opacity="0.3" d="M332.5 187.5C357.3 187.5 363.5 208.167 363.5 218.5" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<line id="Line 9_6" y1="-0.5" x2="32" y2="-0.5" transform="matrix(0 -1 -1 0 332 219)" stroke="black"/>
+<line id="Line 10_6" opacity="0.3" y1="-0.5" x2="32" y2="-0.5" transform="matrix(1 0 0 -1 332 218)" stroke="black"/>
+</g>
+<g id="porte_11">
+<line id="Line 7_5" y1="-0.5" x2="32" y2="-0.5" transform="matrix(1 0 0 -1 364.5 258)" stroke="black"/>
+<path id="Vector 4_5" opacity="0.3" d="M365 290C389 290 395.667 269 396 258.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<line id="Line 6_5" opacity="0.3" y1="-0.5" x2="32" y2="-0.5" transform="matrix(0 -1 -1 0 364 290)" stroke="black"/>
+</g>
+<path id="Vector 15" d="M332 222V218.5M363.5 218.5L364.5 258.5M364.5 290V299H332" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
 </svg>
