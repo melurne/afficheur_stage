@@ -14,10 +14,10 @@ const paths = {
     etage : -1,
     trace :
           [
-            {x: 106, y: 249},
-		        {x: 106, y: 225},
-		        {x: 260, y: 225},
-            {x: 260, y: 190}
+            {x: 106, y: 236},
+		        {x: 106, y: 212},
+		        {x: 260, y: 212},
+            {x: 260, y: 182}
           ],
     steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au bout", "La porte sur la gauche"]
   },
@@ -26,9 +26,9 @@ const paths = {
     etage : -1,
     trace :
           [
-            {x: 106, y: 249},
-		        {x: 106, y: 225},
-		        {x: 267, y: 225}
+            {x: 106, y: 236},
+		        {x: 106, y: 212},
+		        {x: 267, y: 212}
           ],
     steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au bout", "La porte en face"]
   },
