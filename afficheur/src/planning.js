@@ -15,7 +15,8 @@ class FloorPlan extends React.Component {
 			reseting: false,
 			curTime: curTime,
 			events: [{debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}],
-			cycling: false
+			cycling: false,
+			animating: false
 		};
 		this.cursorUp = this.cursorUp.bind(this);
 		this.cursorDown = this.cursorDown.bind(this);
@@ -24,9 +25,6 @@ class FloorPlan extends React.Component {
 		this.updateEvents = this.updateEvents.bind(this);
 		this.cycler = this.cycler.bind(this);
 		this.updateEvents();
-		this.cyclingInterval = setInterval(() => {
-			this.cycler();
-		}, 30000);
 		document.addEventListener('keydown', (e) => this.handler(e));
 	}
 
@@ -79,10 +77,13 @@ class FloorPlan extends React.Component {
 
 	resetAnimation(id) {
 		var element = document.getElementById(id);
+		if (element === null) {
+			return;
+		}
 		element.classList.remove(id);
 		void element.offsetWidth;
-		setTimeout(() => {
-			element.classList.add(id);
+			setTimeout(() => {
+				element.classList.add(id);
 		}, 10);
 	}
 
@@ -95,6 +96,9 @@ class FloorPlan extends React.Component {
 			, 6000
 		);
 		this.updateEvents();
+		this.cyclingInterval = setInterval(() => {
+			this.cycler();
+		}, 30000);
 	}
 
 	componentWillUnmount() {
@@ -153,7 +157,7 @@ class FloorPlan extends React.Component {
 									id={paths[events[selectedEvent].salle].etage === 1 ? "noChange" : "top"}>
 							<div>
 								<span className="indicateurEtage">Vous êtes au 1er etage</span>
-								<Chemin class={this.state.reseting ? "" : "topPath"}
+								<Chemin class={this.state.reseting || !this.state.animating ? "" : "topPath"}
 												points={pathFromAfficheur}
 												dotPosition={pathFromAfficheur[0]}/>
 							</div>
@@ -163,7 +167,7 @@ class FloorPlan extends React.Component {
 									id={"floor"+paths[events[selectedEvent].salle].etage.toString()}>
 							<div>
 								<span className="indicateurEtage">Vous allez au {paths[events[selectedEvent].salle].etage !== -1 ? paths[events[selectedEvent].salle].etage.toString()+"e etage" : "sous-sol"}</span>
-								<Chemin class={this.state.reseting ? "" : "botPath"}
+								<Chemin class={this.state.reseting || !this.state.animating ? "" : "botPath"}
 												points={pathToSalle} />
 							</div>
 						</div>
