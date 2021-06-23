@@ -16,7 +16,7 @@ class FloorPlan extends React.Component {
 			curTime: curTime,
 			events: [{debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}, {debut: "", intitule: "", salle: ""}],
 			cycling: false,
-			animating: false
+			animating: true
 		};
 		this.cursorUp = this.cursorUp.bind(this);
 		this.cursorDown = this.cursorDown.bind(this);
