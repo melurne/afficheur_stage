@@ -104,19 +104,32 @@ class Chemin extends React.Component {
 			dotY: "4",
 			thickness: 3,
 			color: "#2400FF",
-			class: this.props.class
+			class: this.props.class,
+      initialHeight: 300,
+      actualHeight: 300
 		};
 	}
 
+  componentDidMount() {
+    const h = document.getElementById("plan").clientHeight;
+    this.setState({actualHeight: h});
+  }
+
 	render() {
-		var path_d = "M" + this.props.points[0].x.toString() + " " + this.props.points[0].y.toString();
-		for (const point of this.props.points.slice(1)) {
+    var path = [];
+    const factor = this.state.actualHeight / this.state.initialHeight;
+    for (const point of this.props.points) {
+      path = [...path, {x: point.x * factor, y: point.y * factor}]
+    }
+
+		var path_d = "M" + path[0].x.toString() + " " + path[0].y.toString();
+		for (const point of path.slice(1)) {
 			path_d = path_d + "L" + point.x.toString() + " " + point.y.toString();
 		}
 		return (
-			<svg className="chemin" width="300" height="300">
+			<svg className="chemin" width="100%" height="100%">
 				<path className={this.state.class} id={this.state.class} d={path_d} strokeWidth={this.state.thickness} stroke={this.state.color} fill={"none"}/>
-				<ellipse id="EndPoint" cx={this.state.dotPosition.x} cy={this.state.dotPosition.y} rx={this.state.dotX} ry={this.state.dotY} fill={this.state.color}/>
+				<ellipse id="EndPoint" cx={this.state.dotPosition.x * factor} cy={this.state.dotPosition.y * factor} rx={this.state.dotX} ry={this.state.dotY} fill={this.state.color}/>
 			</svg>
 		);
 	}

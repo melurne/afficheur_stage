@@ -155,7 +155,7 @@ class FloorPlan extends React.Component {
 					<div className="plans">
 						<div 	className="etageAfficheur plan"
 									id={paths[events[selectedEvent].salle].etage === 1 ? "noChange" : "top"}>
-							<div>
+							<div id="plan">
 								<span className="indicateurEtage">Vous êtes au 1er etage</span>
 								<Chemin class={this.state.reseting || !this.state.animating ? "" : "topPath"}
 												points={pathFromAfficheur}
