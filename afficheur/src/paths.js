@@ -17,7 +17,8 @@ const paths = {
             {x: 106, y: 236},
 		        {x: 106, y: 212},
 		        {x: 260, y: 212},
-            {x: 260, y: 182}
+            {x: 260, y: 182},
+            {x: 365, y: 365}
           ],
     steps: ["Prendre l'ascenceur à gauche", "Descendre au -1", "A droite au bout", "La porte sur la gauche"]
   },

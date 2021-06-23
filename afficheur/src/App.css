@@ -1,8 +1,15 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
 .viewbox {
-  width: 804px;
-  height: 1236px;
-  margin-left: 8px;
-  margin-top: 0 auto;
+  width: 100%;
+  height: 100%;
+  /*margin-left: 8px;*/
   text-align: center;
   background-color: white;
   border: 2px solid black;
@@ -101,7 +108,7 @@
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   transform-origin: top left;
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .indicateurEtage {
@@ -203,10 +210,10 @@
 }
 
 .events {
-  position: relative;
-  top: 5%;
-  left: 83px;
-  width: 640px;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  width: 100%;
 }
 
 #noChange {
@@ -269,18 +276,19 @@
 /*divres: ligne*/
 
 .divres{
-    height: auto;
+    height: max-content;
     margin-bottom: 10px;
     display:table;
+    width: 90%;
 }
 
 /* affichage sous forme de tableau pour garder hres et res à la même hauteur*/
 
 .divres > .res , .divres > .hres, .divres > .sres{
     display: table-cell;
-    padding: 10px;
+    padding: 3%;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 8px;
     vertical-align: middle;
     text-align: center;
@@ -349,6 +357,10 @@
   100% {
     stroke-dashoffset: 0%;
   }
+}
+
+.chemin {
+  border: 2px solid black;
 }
 
 .chemin .topPath {
