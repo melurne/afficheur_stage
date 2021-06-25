@@ -111,7 +111,20 @@ class Chemin extends React.Component {
 
   componentDidMount() {
     const h = document.getElementById("plan").clientHeight;
+    if (h === null) {
+      return;
+    }
     this.setState({actualHeight: h});
+  }
+
+  componentWillUpdate() {
+    const h = document.getElementById("plan").clientHeight;
+    if (h === null) {
+      return;
+    }
+    if (h !== this.state.actualHeight){
+      this.setState({actualHeight: h});
+    }
   }
 
 	render() {
