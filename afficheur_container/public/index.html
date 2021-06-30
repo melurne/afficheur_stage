@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="js/flipclock/flipclock.css">
+    <link rel="stylesheet" href="App.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/flipclock/flipclock.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>React App</title>
+  </head>
+  <body>
+    <div class="viewbox">
+
+        <div id="banner">
+            <img id="logo" src="logo.svg"/>
+            <span id="titre"><b>Réunions prévues</b></span>
+        </div>
+
+
+        <div id=page>
+            <center><div class="clock" style="margin:0em;"></div></center>
+
+                <script type="text/javascript">
+                    var maintenant=new Date();
+                    var jour=maintenant.getDate();
+                    var moisnb=maintenant.getMonth();
+                    var an=maintenant.getFullYear();
+                    var mois = new Array();
+                        mois[0] = "Janvier";
+                        mois[1] = "Fevrier";
+                        mois[2] = "Mars";
+                        mois[3] = "Avril";
+                        mois[4] = "Mai";
+                        mois[5] = "Juin";
+                        mois[6] = "Juillet";
+                        mois[7] = "Aout";
+                        mois[8] = "Septembre";
+                        mois[9] = "Octobre";
+                        mois[10] = "Novembre";
+                        mois[11] = "Décembre";
+                    document.write('<center><b><span class="date">' + jour + " " + mois[moisnb] + " " + an +'</span></b></center>');
+                </script>
+
+            <script type="text/javascript">
+                var clock = $('.clock').FlipClock({
+                    clockFace: 'TwentyFourHourClock',
+                    showSeconds: false
+                });
+            </script>
+
+            <div id="root">
+            </div>
+
+        </div>
+    </div>
+  </body>
+</html>
