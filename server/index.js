@@ -5,8 +5,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const credentials = {
-  host: "localhost",
-  port: "3308",
+  host: "db",
+  port: "3306",
   user: "root",
   password: "root",
   database: "grr_v31"

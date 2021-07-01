@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+    mysql-development:
+        container_name: db
+        image: mysql:8.0.17
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: events
+        ports:
+            - "3306:3306"
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+            - COMPOSE_HTTP_TIMEOUT=200    
+
+    afficheur:
+        container_name: afficheur
+        build:
+            context: ./afficheur_container
+            dockerfile: ./Dockerfile
+        volumes:
+            - '.:/afficheur_container/app'
+            - '/afficheur_container/app/node_modules'
+        ports:
+            - 3000:3000
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+            - COMPOSE_HTTP_TIMEOUT=200
+
+    client:
+        container_name: client
+        build:
+            context: ./client
+            dockerfile: ./Dockerfile
+        volumes:
+            - '.:/client/app'
+            - '/client/app/node_modules'
+        ports:
+            - 3002:3002
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+            - COMPOSE_HTTP_TIMEOUT=200
+
+    server:
+        container_name: server
+        build:
+            context: ./server
+            dockerfile: ./Dockerfile
+        volumes:
+            - '.:/server/app'
+            - '/server/app/node_modules'
+        ports:
+            - 3001:3001
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+            - COMPOSE_HTTP_TIMEOUT=200
