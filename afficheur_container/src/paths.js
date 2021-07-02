@@ -110,24 +110,35 @@ class Chemin extends React.Component {
 	}
 
   componentDidMount() {
-    const h = document.getElementById("plan").clientHeight;
-    if (h === null) {
+    let elem = document.getElementById("top");
+    if (elem === null) {
+      elem = document.getElementById("noChange");
+    }
+    if (elem === null) {
       return;
     }
-    this.setState({actualHeight: h});
+    let h = elem.clientHeight;
+    if (h !== this.state.actualHeight){
+       this.setState({actualHeight: h}); 
+    }
   }
 
-  componentWillUpdate() {
-    const h = document.getElementById("plan").clientHeight;
-    if (h === null) {
+  componentDidUpdate() {
+    let elem = document.getElementById("top");
+    if (elem === null) {
+      elem = document.getElementById("noChange");
+    }
+    if (elem === null) {
       return;
     }
+    let h = elem.clientHeight;
     if (h !== this.state.actualHeight){
-      this.setState({actualHeight: h});
+       this.setState({actualHeight: h}); 
     }
   }
 
 	render() {
+    //console.log(this.state.actualHeight)
     var path = [];
     const factor = this.state.actualHeight / this.state.initialHeight;
     for (const point of this.props.points) {

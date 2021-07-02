@@ -138,7 +138,7 @@ class FloorPlan extends React.Component {
 
 	render() {
 			//console.log(this.state.events);
-			console.log(this.state.curTime);
+			//console.log(this.state.curTime);
 		if (this.state.selectedEvent !== -1 && this.state.events[0].intitule !== ""){
 			if (this.state.events[0].fin < this.state.curTime) {
 				this.updateEvents();
