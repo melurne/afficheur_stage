@@ -34,7 +34,7 @@ class Selector extends React.Component {
   changeDisplay(room) {
     let payload = {room_id: room};
     console.log(payload);
-    Axios.post("http://server:3001/api/request", payload, {
+    Axios.post("http://localhost:3001/api/request", payload, {
       headers: {
         'Content-Type': 'application/json'
       }
