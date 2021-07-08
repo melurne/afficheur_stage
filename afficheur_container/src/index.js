@@ -17,7 +17,7 @@ class Display extends React.Component {
 	}
 
 	getRequest() {
-		Axios.get("http://localhost:3001/request")
+		Axios.get("http://server:3001/request")
 			.then(response => {
 				const room_id = response.data.room_id;
 				if (room_id === -1) {

@@ -122,7 +122,7 @@ class FloorPlan extends React.Component {
 	}
 
 	updateEvents() {
-		Axios.get("http://localhost:3001/events")
+		Axios.get("http://server:3001/events")
 			.then(response => {
 				//console.log(response);
 				var events_ = [];
