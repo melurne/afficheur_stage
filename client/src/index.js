@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Axios from 'axios';
 
+//import addrs from '../addrs.js';
+
+const server = "http://173.42.0.5:3001/";
+
 class Button extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +38,7 @@ class Selector extends React.Component {
   changeDisplay(room) {
     let payload = {room_id: room};
     console.log(payload);
-    Axios.post("http://localhost:3001/api/request", payload, {
+    Axios.post(server + "api/request/", payload, {
       headers: {
         'Content-Type': 'application/json'
       }

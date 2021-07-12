@@ -5,7 +5,10 @@ import './App.css';
 
 import Directions from './directions.js';
 import FloorPlan from './planning.js';
-import { mapSalle } from './paths.js'
+import { mapSalle } from './paths.js';
+//import addrs from '../addrs.js';
+
+const server = "http://173.42.0.5:3001/";
 
 class Display extends React.Component {
 	constructor() {
@@ -17,7 +20,7 @@ class Display extends React.Component {
 	}
 
 	getRequest() {
-		Axios.get("http://server:3001/request")
+		Axios.get(server + "request/")
 			.then(response => {
 				const room_id = response.data.room_id;
 				if (room_id === -1) {

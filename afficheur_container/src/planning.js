@@ -3,6 +3,9 @@ import Axios from 'axios';
 import './App.css';
 
 import paths, { mapSalle, Chemin } from './paths.js';
+//import addrs from '../addrs.js';
+
+const server = "http://173.42.0.5:3001/";
 
 class FloorPlan extends React.Component {
 	constructor() {
@@ -122,7 +125,7 @@ class FloorPlan extends React.Component {
 	}
 
 	updateEvents() {
-		Axios.get("http://server:3001/events")
+		Axios.get(server + "events/")
 			.then(response => {
 				//console.log(response);
 				var events_ = [];
