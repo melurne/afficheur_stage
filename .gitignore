@@ -1,2 +1,5 @@
 pathViewer.py
 testDB.sql
+
+*.py
+*.sql
