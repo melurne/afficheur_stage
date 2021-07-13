@@ -29,9 +29,11 @@ Dans le cas ou les adresses doivent être changées, il faudra répercuter ces c
 ## Installation
 Sur une machine linux (la distribution importe peu) il suffit d'installer les packages git, docker et docker-compose; clone ce repository et lancer les containers avec docker-compose:
 Sous Debian/Ubuntu:
+---	
 	apt install git docker docker-compose
 	git clone https://www.github.com/melurne/afficheur_stage && cd afficheur_stage
 	docker-compose up --build
+---
 Pour récuperer la main sur le terminal après le lancement des containers il est possible d'ajouer l'option -d à la dernière commande mais dans ce cas la console des containers n'est pas affichée.
 
 
