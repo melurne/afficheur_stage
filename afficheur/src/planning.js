@@ -1,9 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import './App.css';
-
 import paths, { mapSalle, Chemin } from './paths.js';
-//import addrs from '../addrs.js';
 
 const server = "http://173.42.0.5:3001/";
 

@@ -6,7 +6,6 @@ import './App.css';
 import Directions from './directions.js';
 import FloorPlan from './planning.js';
 import { mapSalle } from './paths.js';
-//import addrs from '../addrs.js';
 
 const server = "http://173.42.0.5:3001/";
 
@@ -61,6 +60,3 @@ class Display extends React.Component {
 }
 
 ReactDOM.render(<Display />,document.getElementById('root'));
-//ReactDOM.render(<Directions target="Salle des conférences"/>,document.getElementById('root'));
-
-//serveur-intra/extensions_joomla/Affichage_dynamique_Commissions
