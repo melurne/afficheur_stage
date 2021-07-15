@@ -3,23 +3,22 @@ Le but de cet afficheur est de faciliter les déplacements des administrés au s
 Il devra donc être possible de visualiser le chemin à emprunter pour se rendre dans différentes salles du bâtiment, ainsi que d'associer une salle à des réunions qui s'y déroulent, permettant ainsi aux administrés qui ne connaîtrait pas le nom de la salle de tout de même parvenir à se rendre à la réunion.
 
 ## Principe de la solution
-La solution est composée de trois parties dictinctes (et donc trois applications distinctes):\
+La solution est composée de trois parties dictinctes (et donc trois applications distinctes):
 
 ### Afficheur
 Cette application gère l'affichage à proprement parler des directions.
 Dans son mode d'affichage par defaut, l'application récupère les trois prochaines réservations planifiées dont la fin n'est pas encore dépassée. Ces trois réservations sont affichées en bas de l'écran et une bande noire entoure celle qui est actuelement selectionnée, La partie supérieure est décomposée en deux barres verticales, à gauche se trouve le plan du premier étage (ou est installé l'afficheur) et en dessous de celui-ci le plan de l'étage ou se trouve la salle qui est réservée. Sur ces deux plans est dessiné le chemin qui est indiqué à l'administré pour se rendre dans la salle. Sur la partie de droite, un maximum de quatres étapes écrites permettent de décrire verbalement le chemin à suivre.\
-Lorsqu'il ne reste plus de réservations pour la journée, cette page est remplacée par le message "Il n'y a plus aucune réunion de prévue aujourd'hui"\\
+Lorsqu'il ne reste plus de réservations pour la journée, cette page est remplacée par le message "Il n'y a plus aucune réunion de prévue aujourd'hui"\
 
-L'afficheur a un second mode d'affichage "directions" qui est déclanché par l'action d'un agent d'acceuil -- sur l'application "Client" décrite plus loin -- pour diriger l'administré vers un service en particulier ou une salle dans laquelle il n'ay aurait pas de réservation. Cet affichage reprends à l'identique la partie supérieure du mode décrit précedement, il n'affiche aucune réservation de salle et ajoute le message "Vous avez demandé ??" ou ?? corespond au service demandé.\
+L'afficheur a un second mode d'affichage "directions" qui est déclanché par l'action d'un agent d'acceuil -- sur l'application "Client" décrite plus loin -- pour diriger l'administré vers un service en particulier ou une salle dans laquelle il n'ay aurait pas de réservation. Cet affichage reprends à l'identique la partie supérieure du mode décrit précedement, il n'affiche aucune réservation de salle et ajoute le message "Vous avez demandé ??" ou ?? corespond au service demandé.
 
 ### Client
 La partie opérée par un agent d'acceuil.\
-Elle se compose d'un ensemble de boutons qui permettent d'envoyer la demande à l'afficheur de changer l'affichage du mode par defaut au mode "directions" et d'afficher les directions pour se rendre au service correspondent au bouton appuié. L'affichage reviens alors automatiquement au mode par defaut après un delai prédefini dans le code.\
+Elle se compose d'un ensemble de boutons qui permettent d'envoyer la demande à l'afficheur de changer l'affichage du mode par defaut au mode "directions" et d'afficher les directions pour se rendre au service correspondent au bouton appuié. L'affichage reviens alors automatiquement au mode par defaut après un delai prédefini dans le code.
 
 ### Serveur
 La partie qui fait la jonction entre les deux autres et qui s'occupe de la connexion à la base de donnée.\
-Cette partie demande une interaction uniquement au moment du déploiment pour définir les options de connexion à la base de donnée, il suffit de modifier les informations dans la variable 'credentials' dans le fichier 'server/index.js'.\
-
+Cette partie demande une interaction uniquement au moment du déploiment pour définir les options de connexion à la base de donnée, il suffit de modifier les informations dans la variable 'credentials' dans le fichier 'server/index.js'.
 
 # Installation
 ## Configuration
@@ -32,9 +31,7 @@ Les SVGs correspondants aux plans des differents étages sont à fournir dans 'a
 Les chemins affichés à l'écran sont générés à partir d'une liste de points défini dans 'afficheur/src/paths.js', la liste des chemins est représentée par un dictionnaire au format json ou la clef correspond au nom de la salle ou du service et ou le chemin doit comporter les champs: 
 - etage: l'étage ou se trouve la destination
 - trace: la liste des points qui permettra de dessiner le chemin à l'écran (définis dans un carré de 300x300 et (0,0) est dans le coin supérieur gauche)
-- steps: une liste de 4 étapes clés qui permettront de guider l'administré (elles correspondent à ce qu'un agent indiquerai pour diriger l'administré vers la destination), si moins de 4 étapes sont nécessaires, la liste doit être remplie de ligne vides ( "" ) pour arriver à 4 éléments. Si plus de 4 éléments sont renseignés, seul les 4 premiers seront affichés.\
-\
-
+- steps: une liste de 4 étapes clés qui permettront de guider l'administré (elles correspondent à ce qu'un agent indiquerai pour diriger l'administré vers la destination), si moins de 4 étapes sont nécessaires, la liste doit être remplie de ligne vides ( "" ) pour arriver à 4 éléments. Si plus de 4 éléments sont renseignés, seul les 4 premiers seront affichés.
 
 ## Installation
 Sur une machine linux (la distribution importe peu) il suffit d'installer les packages git, docker et docker-compose; clone ce repository et lancer les containers avec docker-compose:
