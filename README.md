@@ -33,7 +33,8 @@ Les chemins affichés à l'écran sont générés à partir d'une liste de point
 - etage: l'étage ou se trouve la destination
 - trace: la liste des points qui permettra de dessiner le chemin à l'écran (définis dans un carré de 300x300 et (0,0) est dans le coin supérieur gauche)
 - steps: une liste de 4 étapes clés qui permettront de guider l'administré (elles correspondent à ce qu'un agent indiquerai pour diriger l'administré vers la destination), si moins de 4 étapes sont nécessaires, la liste doit être remplie de ligne vides ( "" ) pour arriver à 4 éléments. Si plus de 4 éléments sont renseignés, seul les 4 premiers seront affichés.\
-\ 
+\
+
 
 ## Installation
 Sur une machine linux (la distribution importe peu) il suffit d'installer les packages git, docker et docker-compose; clone ce repository et lancer les containers avec docker-compose:
