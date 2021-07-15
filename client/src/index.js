@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Axios from 'axios';
 
-//import addrs from '../addrs.js';
-
 const server = "http://173.42.0.5:3001/";
 
 class Button extends React.Component {
