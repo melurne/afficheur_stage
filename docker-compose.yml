@@ -19,11 +19,11 @@ services:
     afficheur:
         container_name: afficheur
         build:
-            context: ./afficheur_container
+            context: ./afficheur
             dockerfile: ./Dockerfile
         volumes:
-            - '.:/afficheur_container/app'
-            - '/afficheur_container/app/node_modules'
+            - '.:/afficheur/app'
+            - '/afficheur/app/node_modules'
         ports:
             - 3000:3000
         environment: 
